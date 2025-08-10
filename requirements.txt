@@ -1,0 +1,19 @@
+# Zenalyst Analyzer – prerequisites 
+
+# This repository is a React (Vite) frontend + Spring Boot backend.
+
+# Required software (install these):
+# - Node.js >= 20.x (LTS)
+# - npm >= 10.x
+# - Java JDK 17
+# - Apache Maven >= 3.9
+
+# Frontend env var (create frontend/.env):
+#   VITE_BACKEND_URL=http://localhost:8080
+
+# Commands to run (from repo root):
+# - Backend:  cd backend && mvn spring-boot:run
+# - Frontend: cd frontend && npm ci && npm run dev
+
+
+

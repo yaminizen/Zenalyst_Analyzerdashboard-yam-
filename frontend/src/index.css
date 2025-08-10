@@ -1,0 +1,389 @@
+/* DashboardKit Theme overrides */
+html {
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom overrides for DashboardKit theme */
+.text-break {
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Logo styling */
+.navbar-brand {
+  padding: 0.5rem 0 !important;
+}
+
+.navbar-brand:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+/* Professional Chart Layout Styles - Vertical Stack */
+.charts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.chart-wrapper {
+  width: 100%;
+  position: relative;
+  margin-bottom: 0;
+}
+
+.chart-card {
+  width: 100%;
+  border-radius: 12px !important;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #ffffff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
+}
+
+.chart-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+.chart-header {
+  padding: 1.5rem 2rem 1rem 2rem;
+  border-bottom: 1px solid rgba(229, 231, 235, 0.8) !important;
+  background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%) !important;
+}
+
+.chart-body {
+  padding: 0 !important;
+  background: #ffffff;
+}
+
+
+/* Remove old grid styles */
+.chart-item {
+  animation: none !important;
+}
+
+/* Enhanced Chart Elements with better text handling */
+.chart-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(229, 231, 235, 0.5);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+/* Scrollable chart areas for large datasets */
+.chart-scrollable {
+  max-height: 800px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0.5rem;
+  border: 1px solid rgba(229, 231, 235, 0.3);
+  border-radius: 8px;
+  background: rgba(248, 249, 250, 0.3);
+}
+
+/* Improved text truncation for chart elements */
+.chart-text-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.chart-emoji {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.chart-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+  line-height: 1.2;
+}
+
+.chart-description {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.chart-badge .badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 6px;
+  letter-spacing: 0.025em;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Enhanced responsive behavior with better text scaling */
+@media (max-width: 768px) {
+  .charts-container {
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .chart-header {
+    padding: 1rem 1.5rem 0.75rem 1.5rem;
+  }
+  
+  .plotly-container {
+    padding: 0.75rem 0.5rem 1rem 0.5rem; /* Reduced horizontal padding for mobile */
+    overflow-x: auto;
+  }
+  
+  .chart-title {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+  
+  .chart-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .chart-emoji {
+    font-size: 1.25rem;
+  }
+  
+  /* Mobile-specific plotly adjustments */
+  .js-plotly-plot {
+    min-height: 350px !important;
+  }
+  
+  .js-plotly-plot .xtick text,
+  .js-plotly-plot .ytick text {
+    font-size: 9px !important;
+    max-width: 80px;
+  }
+  
+  .js-plotly-plot .legend text {
+    font-size: 9px !important;
+    max-width: 100px;
+  }
+  
+  /* Ensure chart controls are also responsive */
+  .chart-controls {
+    overflow-x: auto;
+  }
+}
+
+/* Medium screen adjustments */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .plotly-container {
+    padding: 1rem 1rem 1.2rem 1rem;
+  }
+  
+  .js-plotly-plot .xtick text,
+  .js-plotly-plot .ytick text {
+    font-size: 10px !important;
+    max-width: 90px;
+  }
+}
+
+/* Large screen optimizations */
+@media (min-width: 1200px) {
+  .plotly-container {
+    padding: 1.2rem 2rem 2rem 2rem;
+  }
+  
+  .js-plotly-plot .xtick text,
+  .js-plotly-plot .ytick text {
+    font-size: 11px !important;
+    max-width: 120px;
+  }
+}
+
+/* Plotly chart improvements - No Overlapping with Enhanced Responsiveness */
+.js-plotly-plot {
+  width: 100% !important;
+  position: relative;
+  display: block;
+  clear: both;
+  margin: 0;
+  padding: 0;
+  min-width: 0; /* Allows flex shrinking */
+}
+
+.js-plotly-plot .plotly {
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 0;
+}
+
+.js-plotly-plot .main-svg {
+  overflow: visible !important;
+  max-width: 100%;
+}
+
+/* Force proper height calculation with responsive scaling */
+.plotly-container .js-plotly-plot {
+  min-height: 400px;
+  height: auto !important;
+  max-width: 100%;
+  overflow-x: auto; /* Horizontal scroll for wide charts if needed */
+}
+
+/* Ensure charts don't float or overlap */
+.chart-wrapper {
+  clear: both;
+  display: block;
+  float: none;
+  position: static;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden; /* Prevent content from breaking out */
+}
+
+.chart-card {
+  display: block;
+  clear: both;
+  float: none;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Enhanced plotly container for better text handling */
+.plotly-container {
+  width: 100%;
+  padding: 1rem 1.5rem 1.5rem 1.5rem;
+  background: #ffffff;
+  overflow-x: auto; /* Allow horizontal scrolling for wide content */
+  overflow-y: hidden;
+}
+
+/* Text overflow prevention for plotly elements */
+.js-plotly-plot .xtick text,
+.js-plotly-plot .ytick text {
+  font-size: 11px !important;
+  max-width: 100px;
+  word-wrap: break-word;
+}
+
+/* Legend text improvements */
+.js-plotly-plot .legend text {
+  font-size: 10px !important;
+  max-width: 120px;
+}
+
+/* Annotation text improvements */
+.js-plotly-plot .annotation text {
+  font-size: 10px !important;
+  max-width: 150px;
+  word-wrap: break-word;
+}
+
+/* Custom range slider */
+.custom-range {
+  height: 0.5rem;
+  background: linear-gradient(90deg, #e9ecef 0%, #0366d6 100%);
+  border-radius: 0.25rem;
+}
+
+.custom-range::-webkit-slider-thumb {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background: #0366d6;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.custom-range::-moz-range-thumb {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background: #0366d6;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Chart loading states */
+.chart-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  color: #6c757d;
+}
+
+.chart-loading .spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* Professional color palette for charts */
+:root {
+  --chart-primary: #0366d6;
+  --chart-success: #28a745;
+  --chart-info: #17a2b8;
+  --chart-warning: #ffc107;
+  --chart-danger: #dc3545;
+  --chart-secondary: #6c757d;
+  --chart-light: #f8f9fa;
+  --chart-dark: #343a40;
+}
+
+/* Enhance form controls */
+.border-2 {
+  border-width: 2px !important;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.border-2:focus {
+  border-color: #0366d6;
+  box-shadow: 0 0 0 0.2rem rgba(3, 102, 214, 0.25);
+}
+
+/* Chart header improvements */
+.card-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+/* Animation for chart cards */
+@keyframes slideInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.chart-item {
+  animation: slideInUp 0.5s ease-out;
+}
+
+/* Staggered animation delay */
+.chart-item:nth-child(1) { animation-delay: 0.1s; }
+.chart-item:nth-child(2) { animation-delay: 0.2s; }
+.chart-item:nth-child(3) { animation-delay: 0.3s; }
+.chart-item:nth-child(4) { animation-delay: 0.4s; }
+.chart-item:nth-child(5) { animation-delay: 0.5s; }
+.chart-item:nth-child(6) { animation-delay: 0.6s; }
+.chart-item:nth-child(7) { animation-delay: 0.7s; }
+.chart-item:nth-child(8) { animation-delay: 0.8s; }

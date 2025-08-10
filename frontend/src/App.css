@@ -1,0 +1,351 @@
+#root {
+  max-width: none;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Chart Dashboard Styles */
+.chart-dashboard {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+.chart-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 16px;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 12px 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  margin-bottom: 16px;
+}
+
+.toolbar-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toolbar-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.toolbar-control {
+  min-width: 180px;
+}
+
+.toolbar-number {
+  width: 140px;
+}
+
+.toolbar-range {
+  width: 220px;
+}
+
+.toolbar-hint {
+  font-size: 12px;
+  color: #6b7280;
+  min-width: 48px;
+  text-align: right;
+}
+
+.chart-selector {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.chart-selector label {
+  font-weight: 600;
+  margin-right: 0.5rem;
+  color: #333;
+}
+
+.chart-type-select {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #ffffff;
+  font-size: 14px;
+  min-width: 200px;
+}
+
+.chart-type-select:focus {
+  outline: none;
+  border-color: #646cff;
+  box-shadow: 0 0 0 2px rgba(100, 108, 255, 0.2);
+}
+
+/* Charts Grid Layout */
+.charts-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.chart-container {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 1.25rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.chart-container h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+/* Removed vega specific class */
+
+.chart-error {
+  padding: 1rem;
+  margin: 1rem 0;
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.chart-no-data {
+  padding: 2rem;
+  margin: 1rem 0;
+  background: #e2e3e5;
+  color: #6c757d;
+  border: 1px solid #d6d8db;
+  border-radius: 4px;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Table Auto Styles */
+.table-auto-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.table-wrapper {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  height: 360px; /* Fixed height for exactly 10 records (40 header + 10 x 32) */
+  overflow: hidden; /* Remove scroll, use pagination instead */
+}
+
+.table-auto {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  table-layout: fixed;
+}
+
+.table-auto thead {
+  background: #f9fafb;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.table-auto th {
+  padding: 10px 8px;
+  text-align: left;
+  font-weight: 700;
+  color: #111827;
+  border: 1px solid #e5e7eb;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 80px;
+  max-width: 160px;
+  height: 40px; /* Fixed height for header */
+  background: #f3f4f6;
+}
+
+.table-auto td {
+  padding: 8px 8px;
+  border: 1px solid #e5e7eb;
+  vertical-align: top;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 160px;
+  height: 32px; /* Fixed height for each row (10 x 32 = 320 + 40 header = 360px) */
+}
+
+.table-auto tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.table-auto tbody tr:nth-child(even) {
+  background-color: #fafbfc;
+}
+
+.table-auto tbody tr:nth-child(even):hover {
+  background-color: #f1f3f4;
+}
+
+/* Pagination Controls */
+.pagination-controls {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.pagination-info {
+  font-size: 12px;
+  color: #374151;
+  font-weight: 500;
+  text-align: center;
+}
+
+.pagination-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.pagination-btn {
+  padding: 6px 10px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  color: #374151;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  min-width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: #f3f4f6;
+  border-color: #2563eb;
+  color: #2563eb;
+}
+
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: #e5e7eb;
+  color: #9ca3af;
+}
+
+.pagination-btn.active {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+.page-ellipsis {
+  color: #666;
+  font-weight: 500;
+  margin: 0 0.25rem;
+  font-size: 11px;
+  display: inline-block;
+}
+
+.table-note {
+  padding: 0.5rem 1rem;
+  background: #e3f2fd;
+  color: #1976d2;
+  font-size: 12px;
+  text-align: center;
+  border-top: 1px solid #dee2e6;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .chart-dashboard {
+    padding: 0.5rem;
+    max-width: 100%;
+  }
+  
+  .chart-type-select {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .table-auto-container {
+    padding: 0.75rem;
+    max-width: 100%;
+  }
+
+  .table-auto {
+    font-size: 12px;
+  }
+
+  .table-auto th,
+  .table-auto td {
+    padding: 6px 6px;
+    min-width: 60px;
+    max-width: 120px;
+  }
+}

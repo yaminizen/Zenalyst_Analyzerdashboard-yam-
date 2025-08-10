@@ -1,0 +1,19 @@
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <!-- Yellow rounded square background for Z -->
+  <rect x="8" y="8" width="44" height="44" rx="6" ry="6" fill="#F1C40F"/>
+  
+  <!-- Black Z letter -->
+  <text x="30" y="40" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#000000" text-anchor="middle">Z</text>
+  
+  <!-- Main text "enalyst" -->
+  <text x="65" y="40" font-family="Arial, sans-serif" font-size="32" font-weight="normal" fill="#000000">en</text>
+  
+  <!-- Yellow triangle for A -->
+  <polygon points="105,25 112,40 98,40" fill="#F1C40F"/>
+  
+  <!-- Rest of text "lyst" -->
+  <text x="118" y="40" font-family="Arial, sans-serif" font-size="32" font-weight="normal" fill="#000000">lyst</text>
+  
+  <!-- Tagline "Born Thinking" -->
+  <text x="30" y="55" font-family="Arial, sans-serif" font-size="14" font-weight="normal" fill="#666666">Born Thinking</text>
+</svg>

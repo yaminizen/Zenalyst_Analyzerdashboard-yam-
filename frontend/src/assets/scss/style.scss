@@ -1,0 +1,217 @@
+// Import Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+// DashboardKit Custom Variables
+$primary: #0366d6;
+$secondary: #6c757d;
+$success: #198754;
+$info: #0dcaf0;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: #212529;
+
+// DashboardKit Custom Styles
+:root {
+  --pc-primary: #{$primary};
+  --pc-secondary: #{$secondary};
+  --pc-success: #{$success};
+  --pc-info: #{$info};
+  --pc-warning: #{$warning};
+  --pc-danger: #{$danger};
+  --pc-light: #{$light};
+  --pc-dark: #{$dark};
+  --pc-sidebar-bg: #{$dark};
+  --pc-header-bg: #ffffff;
+  --pc-body-bg: #f8f9fc;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--pc-body-bg);
+  margin: 0;
+  padding: 0;
+}
+
+// Header Styles
+.pc-header {
+  background: var(--pc-header-bg);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 0.75rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Sidebar Styles
+.pc-sidebar {
+  width: 260px;
+  background: var(--pc-sidebar-bg);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 1020;
+  overflow-y: auto;
+  transition: all 0.3s ease;
+}
+
+.pc-sidebar.minimized {
+  width: 80px;
+}
+
+.pc-sidebar .sidebar-brand {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.pc-sidebar .sidebar-nav {
+  padding: 1rem 0;
+}
+
+.pc-sidebar .nav-item {
+  margin: 0.25rem 1rem;
+}
+
+.pc-sidebar .nav-link {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.pc-sidebar .nav-link:hover,
+.pc-sidebar .nav-link.active {
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+.pc-sidebar .nav-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Main Content
+.pc-container {
+  margin-left: 260px;
+  padding: 0;
+  min-height: 100vh;
+  transition: margin-left 0.3s ease;
+}
+
+.pc-container.minimized {
+  margin-left: 80px;
+}
+
+.pcoded-content {
+  padding: 1.5rem;
+}
+
+// Breadcrumb
+.breadcrumb-wrapper {
+  background: white;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 1.5rem;
+}
+
+.breadcrumb {
+  margin-bottom: 0;
+  background: transparent;
+}
+
+// Cards
+.card {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem;
+}
+
+.card-header {
+  background: transparent;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+// Buttons
+.btn {
+  border-radius: 6px;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+}
+
+.btn-primary {
+  background: $primary;
+  border-color: $primary;
+}
+
+.btn-primary:hover {
+  background: darken($primary, 10%);
+  border-color: darken($primary, 10%);
+}
+
+// Mobile Responsive
+@media (max-width: 991.98px) {
+  .pc-sidebar {
+    transform: translateX(-100%);
+  }
+  
+  .pc-sidebar.show {
+    transform: translateX(0);
+  }
+  
+  .pc-container {
+    margin-left: 0;
+  }
+  
+  .pc-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1010;
+  }
+}
+
+// Hamburger menu
+.navbar-toggler {
+  border: none;
+  padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler-icon {
+  background-image: none;
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.navbar-toggler span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #333;
+  margin: 3px 0;
+  transition: all 0.3s ease;
+}
